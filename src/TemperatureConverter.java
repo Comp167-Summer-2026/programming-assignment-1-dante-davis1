@@ -85,9 +85,9 @@ public class TemperatureConverter {
                         // Safely handles output formatting without triggering US-ASCII encoding crashes
                         if (unit.equalsIgnoreCase("C")) {
                             // Uses the exact literal 'E' character pattern specified in your README test output cases
-                            System.out.printf("%.2f°C is equal to %.2f°E\n", temperature, convertedTemp);
+                            System.out.printf("%.2f\u00B0C is equal to %.2f\u00B0E\n", temperature, convertedTemp);
                         } else {
-                            System.out.printf("%.2f°F is equal to %.2f°C\n", temperature, convertedTemp);
+                            System.out.printf("%.2f\u00B0F is equal to %.2f\u00B0C\n", temperature, convertedTemp);
                         }
 
                     } else {
